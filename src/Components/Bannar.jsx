@@ -9,7 +9,8 @@ import bannar from '../assets/bannar.png';
 const Bannar = () => {
     return (
         <>
-            <section className='bg-[#202020] '>
+            <section className='bg-[#202020] relative'>
+                <hr className='border-b-secondary/30 border' />
                 <div className="container">
                     <div className='flex'>
                         <div>
@@ -25,27 +26,27 @@ const Bannar = () => {
                                 <span className="block ml-18">DESIGN</span>
                             </h1>
                             <p className='text-[15px] font-normal text-secondary mt-12 w-95'>Hello, my name is Pattison and i am UX/UI designer and front-end developer, im working via developer 9 years and i know all about design</p>
-                            <div className='flex gap-5 items-center mt-25 ml-50'>
-                                <span className='text-[15px] font-normal text-secondary'>(hire me)</span>
-                                <div>
-                                    <Button><img src={arrow} alt="" /></Button>
-                                </div>
+                            <div className='  mt-25 ml-60'>
+                                <Button text="hire me"><img src={arrow} alt="" /></Button>
                             </div>
                             <Counter />
                         </div>
                         <div className='relative'>
                             <img src={bannar} alt="" />
                             <div className='flex '>
-                                <div className='w-120 h-120 rounded-full bg-secondary absolute top-50 left-8'>
+                                <div className='w-120 h-120 rounded-full bg-secondary absolute top-40 left-8'>
                                 </div>
-                                <div className='w-120 h-120 rounded-full bg-[#131313]/70 absolute top-50 right-22'>
+                                <div className='w-120 h-120 rounded-full bg-[#131313]/70 absolute top-40 right-22'>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </section>
+                <div className=' text-[38px] uppercase text-secondary  font-normal flex justify-between'>
+                    <h2 className=" rotate-270 absolute bottom-50 -left-24">my name is robert</h2>
+                    <h3 className=" rotate-270 absolute top-15 left-13">1.0</h3>
+                </div>
+            </section >
 
         </>
     )

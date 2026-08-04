@@ -3,16 +3,39 @@ import Button from './Button'
 import arrow from "../assets/arrow.svg";
 import Counter from './Counter';
 import bannar from '../assets/bannar.png';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import img from "../assets/img.png";
+import happy from "../assets/happy.png";
+
 
 
 
 const Bannar = () => {
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        appendDots: dots => (
+            <div className='relative'>
+                <ul className='absolute  rotate-90 -top-70 -right-6.75' style={{ margin: "0px" }}> {dots} </ul>
+            </div>
+        ),
+        customPaging: i => (
+            <div className='bg-[#808080] w-3 h-3 rounded-full' >
+            </div>
+        )
+    };
     return (
         <>
             <section className='bg-[#202020] relative'>
                 <hr className='border-b-secondary/30 border' />
                 <div className="container">
-                    <div  className='grid grid-cols-12'>
+                    <div className='grid grid-cols-12'>
                         <div className='col-span-4 pt-7.5'>
                             <h1 className="text-[76px] leading-[0.9]  text-secondary  font-medium ">
                                 <div className='flex gap-25'>
@@ -31,14 +54,57 @@ const Bannar = () => {
                             </div>
                             <Counter />
                         </div>
-                        <div className='relative col-span-8 pl-7'>
-                            <img src={bannar} alt="" />
-                            <div className='flex '>
-                                <div className='w-120 h-120 rounded-full bg-secondary absolute top-40 left-8'>
-                                </div>
-                                <div className='w-120 h-120 rounded-full bg-[#131313]/70 absolute top-40 right-22'>
-                                </div>
+                        <div className="relative col-span-8">
+                            <img src={bannar} alt="" className="w-full" />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <Slider {...settings} className="w-full">
+                                    <div>
+                                        <div className="flex justify-center items-center">
+                                            <div className="w-120 h-120 rounded-full bg-secondary overflow-hidden">
+                                                <img src={img} className="w-full h-full object-cover" />
+                                            </div>
+                                            <div className="-ml-20 w-120 h-120 rounded-full bg-[#131313]/70 overflow-hidden">
+                                                <img src={happy} className="w-full h-full object-cover" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-center items-center">
+                                            <div className="w-120 h-120 rounded-full bg-secondary overflow-hidden">
+                                                <img src={happy} className="w-full h-full object-cover" />
+                                            </div>
+                                            <div className="-ml-20 w-120 h-120 rounded-full bg-[#131313]/70 overflow-hidden">
+                                                <img src={img} className="w-full h-full object-cover" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                     <div>
+                                        <div className="flex justify-center items-center">
+                                            <div className="w-120 h-120 rounded-full bg-secondary overflow-hidden">
+                                                <img src={img} className="w-full h-full object-cover" />
+                                            </div>
+                                            <div className="-ml-20 w-120 h-120 rounded-full bg-[#131313]/70 overflow-hidden">
+                                                <img src={happy} className="w-full h-full object-cover" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-center items-center">
+                                            <div className="w-120 h-120 rounded-full bg-secondary overflow-hidden">
+                                                <img src={happy} className="w-full h-full object-cover" />
+                                            </div>
+                                            <div className="-ml-20 w-120 h-120 rounded-full bg-[#131313]/70 overflow-hidden">
+                                                <img src={img} className="w-full h-full object-cover" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </Slider>
+
                             </div>
+
                         </div>
                     </div>
                 </div>

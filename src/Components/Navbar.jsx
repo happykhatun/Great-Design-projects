@@ -21,12 +21,12 @@ const Navbar = () => {
                             </div>
                         </div>
                         <ul className='flex items-center gap-16 text-secondary font-normal text-[14px]'>
-                            <li> <NavLink to="/">HOME</NavLink></li>
-                            <li> <NavLink to="/projects">PROJECTS</NavLink></li>
-                            <li> <NavLink to="/awwards">AWWARDS</NavLink></li>
-                            <li> <NavLink to="/testimonial">TESTIMONIAL</NavLink></li>
-                            <li> <NavLink to="/blog">BLOG</NavLink></li>
-                            <li> <NavLink to="/contact">CONTACT</NavLink></li>
+                            <li className='hover:text-primary duration-200 transition-all'> <NavLink to="/">HOME</NavLink></li>
+                            <li className='hover:text-primary duration-200 transition-all'> <NavLink to="/projects">PROJECTS</NavLink></li>
+                            <li className='hover:text-primary duration-200 transition-all'> <NavLink to="/awwards">AWWARDS</NavLink></li>
+                            <li className='hover:text-primary duration-200 transition-all'> <NavLink to="/testimonial">TESTIMONIAL</NavLink></li>
+                            <li className='hover:text-primary duration-200 transition-all'> <NavLink to="/blog">BLOG</NavLink></li>
+                            <li className='hover:text-primary duration-200 transition-all'> <NavLink to="/contact">CONTACT</NavLink></li>
                         </ul>
                         <div>
                             <p  className='font-normal text-[15px] text-secondary'>+2(315) 590 83 68</p>

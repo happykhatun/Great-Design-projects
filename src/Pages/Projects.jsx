@@ -30,7 +30,6 @@ const Projects = () => {
                         </div>
                         <div className="col-span-8 flex justify-center items-center pt-10 pl-10 pr-10">
                             <div className="w-full h-180 bg-secondary"></div>
-
                         </div>
                     </div>
                 </div>

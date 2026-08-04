@@ -12,8 +12,8 @@ const Bannar = () => {
             <section className='bg-[#202020] relative'>
                 <hr className='border-b-secondary/30 border' />
                 <div className="container">
-                    <div className='flex'>
-                        <div>
+                    <div  className='grid grid-cols-12'>
+                        <div className='col-span-4 pt-7.5'>
                             <h1 className="text-[76px] leading-[0.9]  text-secondary  font-medium ">
                                 <div className='flex gap-25'>
                                     <span className="block">GET</span>
@@ -31,7 +31,7 @@ const Bannar = () => {
                             </div>
                             <Counter />
                         </div>
-                        <div className='relative'>
+                        <div className='relative col-span-8 pl-7'>
                             <img src={bannar} alt="" />
                             <div className='flex '>
                                 <div className='w-120 h-120 rounded-full bg-secondary absolute top-40 left-8'>
